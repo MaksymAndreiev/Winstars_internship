@@ -39,9 +39,7 @@ Credit: <a href="https://www.ris-ai.com/random-forest-algorithm">image source</a
 ## Setup
 To set up the project, follow these steps:
 
-1. Clone the repository:
-   
-
+1. Clone the repository
 2. Install the required libraries: 
     ```bash
     pip install -r requirements.txt
