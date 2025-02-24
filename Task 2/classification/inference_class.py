@@ -1,9 +1,10 @@
 import tensorflow as tf
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-model = tf.keras.models.load_model("../models/wildcat_cnn_model.h5")
-dataset = pd.read_csv("../data/WILDCATS.CSV")
+model = tf.keras.models.load_model(os.path.join(os.path.dirname(__file__), "../models/wildcat_cnn_model.h5"))
+dataset = pd.read_csv(os.path.join(os.path.dirname(__file__), "../data/WILDCATS.CSV"))
 
 
 # Load the image
@@ -14,7 +15,7 @@ def get_random_image():
     """
     random_image = dataset.sample(1)
     image_path = random_image.iloc[0]["filepaths"]
-    image_path = f"../data/{image_path}"
+    image_path = os.path.join(os.path.dirname(__file__), f"../data/{image_path}")
     return image_path
 
 
@@ -34,8 +35,8 @@ def predict(image_path):
     # Get classes and convert to lowercase
     class_labels = list(dataset["labels"].unique())
     class_labels = [label.lower() for label in class_labels]
-    pred_index = tf.argmax(predictions, axis=1).numpy()[0] # Get the index of the prediction (highest probability)
-    prediction = class_labels[pred_index] # Get the class name
+    pred_index = tf.argmax(predictions, axis=1).numpy()[0]  # Get the index of the prediction (highest probability)
+    prediction = class_labels[pred_index]  # Get the class name
     if prediction == "lions":  # As the label is "lions" in the dataset, we need to convert it to "lion"
         prediction = "lion"
     return prediction
@@ -43,7 +44,7 @@ def predict(image_path):
 
 if __name__ == "__main__":
     image_path = get_random_image()  # Get a random image
-    prediction = predict(image_path) # Predict the class of the image
-    plt.imshow(tf.keras.preprocessing.image.load_img(image_path)) # Plot the image
-    plt.title(f"Predicted: {prediction}, actual: {image_path.split('/')[-2].lower()}") # Set the title
+    prediction = predict(image_path)  # Predict the class of the image
+    plt.imshow(tf.keras.preprocessing.image.load_img(image_path))  # Plot the image
+    plt.title(f"Predicted: {prediction}, actual: {image_path.split('/')[-2].lower()}")  # Set the title
     plt.show()
