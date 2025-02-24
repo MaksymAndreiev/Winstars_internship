@@ -29,9 +29,6 @@ if __name__ == "__main__":
     plt.show()
     # Get user input
     text = input("Enter a guess: ")
-    print("-" * 50 + "DEBUG" + "-" * 50)
-    print("Entities in the text: ", get_entities(text))
-    print("-" * 50 + "DEBUG" + "-" * 50)
     result = process_user_input(text, prediction)
     if result:
         print("Correct! It's a {}!".format(prediction))
