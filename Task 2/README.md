@@ -25,7 +25,8 @@ The dataset contains images of the following wildcats:
 
 ### Image Classification
 I used a pre-trained MobileNetV2 model to classify the images. I froze the first layers of the model and added pooling and dense layers on top of it. 
-Also I added dropout layer to prevent overfitting. The model was trained for 25 epochs. 
+Also I added dropout layer to prevent overfitting. The data was augmented using the `ImageDataGenerator` class from the `keras` library.
+The model was trained for 25 epochs.
 
 ### Named Entity Recognition
 Honestly, I didn't have experience with NER before. I was trying to find any dataset for NER, but I couldn't find any.
