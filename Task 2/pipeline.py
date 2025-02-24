@@ -7,10 +7,10 @@ from ner import get_entities
 
 def process_user_input(text, prediction):
     """
-
-    :param text:
-    :param prediction:
-    :return:
+    Process the user input and check if the prediction is correct.
+    :param text: User input.
+    :param prediction: Predicted class.
+    :return: Boolean value indicating if the prediction is correct.
     """
     entities = get_entities(text)
     for entity in entities:
@@ -29,6 +29,7 @@ if __name__ == "__main__":
     plt.show()
     # Get user input
     text = input("Enter a guess: ")
+    print(f"Your guess: {text}")
     result = process_user_input(text, prediction)
     if result:
         print("Correct! It's a {}!".format(prediction))
