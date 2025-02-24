@@ -46,5 +46,5 @@ To set up the project, follow these steps:
     ```
 3. Run the demo notebook:
    ```bash
-   jupyter notebook MNIST_Classification.ipynb
+   jupyter notebook demo.ipynb
    ```
