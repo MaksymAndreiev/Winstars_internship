@@ -1,6 +1,6 @@
 tensorflow
 numpy
-sklearn
+scikit-learn
 jupyter
 matplotlib
 keras
