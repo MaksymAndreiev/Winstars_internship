@@ -1,8 +1,9 @@
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+import os
 
-train_dir = '../data/train'
-val_dir = '../data/valid'
-test_dir = '../data/test'
+train_dir = os.path.join(os.path.dirname(__file__), '../data/train')
+val_dir = os.path.join(os.path.dirname(__file__), '../data/valid')
+test_dir = os.path.join(os.path.dirname(__file__), '../data/test')
 
 img_size = 224
 batch_size = 32
