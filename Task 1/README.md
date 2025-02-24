@@ -18,15 +18,23 @@ of the MNIST dataset. The model uses the ReLU activation function for the hidden
 function for the output layer. The model is trained using the Adam optimizer and the categorical cross-entropy loss
 function.
 
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*SfRJNb5dOOPZYEFY5jDRqA.png" width=500 height=250/>
+Credit: <a href="https://medium.com/@koushikkushal95/mnist-hand-written-digit-classification-using-neural-network-from-scratch-54da85712a06">image source</a>
+
 ### Task 2: Convolutional Neural Network
 The Convolutional Neural Network is implemented using the TensorFlow library. The model consists of 2 convolutional
 layers, 2 max-pooling layers, flattennig layer and 2 dense layers. Like the Feed-Forward Neural Network, the model uses 
 the ReLU activation function for the convolutional and dense layers and the softmax activation function for the output
 layer, and is trained using the Adam optimizer and the categorical cross-entropy loss function.
 
+<img src="https://goodboychan.github.io/images/CNN_MNIST.png" width=500 height=150/>
+Credit: <a href="https://goodboychan.github.io/python/deep_learning/tensorflow-keras/2020/10/10/01-CNN-with-MNIST.html">image source</a>
+
 ### Task 3: Random Forest
-The Random Forest model is implemented using the scikit-learn library. It consists of 100 decision trees and is trained
-using the Gini impurity criterion.
+The Random Forest model is implemented using the scikit-learn library. The Random forest classifier creates a set of decision trees from a randomly selected subset of the training set. It is a set of decision trees from a randomly selected subset of the training set and then It collects the votes from different decision trees to decide the final prediction.
+
+<img src="https://www.ris-ai.com/static/images/models/random-forest-algorithm.jpg" width=500 height=350/>
+Credit: <a href="https://www.ris-ai.com/random-forest-algorithm">image source</a>
 
 ## Setup
 To set up the project, follow these steps:
@@ -38,7 +46,7 @@ To set up the project, follow these steps:
     ```bash
     pip install -r requirements.txt
     ```
-   3. Run the demo notebook:
-       ```bash
-       jupyter notebook MNIST_Classification.ipynb
-       ```
+3. Run the demo notebook:
+   ```bash
+   jupyter notebook MNIST_Classification.ipynb
+   ```
