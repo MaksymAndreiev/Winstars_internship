@@ -1,6 +1,6 @@
 tensorflow
 numpy
-sklearn
-jupyter
+pandas
 matplotlib
+spacy
 keras
