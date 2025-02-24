@@ -17,4 +17,4 @@ test_loss, test_acc = model.evaluate(test_generator)
 print(f"Test accuracy: {test_acc}")
 
 # Save the model
-model.save('../../models/wildcat_cnn_model.h5')
+model.save('../models/wildcat_cnn_model.h5')
