@@ -1,5 +1,5 @@
 from tensorflow.keras.layers import Dense, Dropout
-from dataset_loader import train_generator
+from .dataset_loader import train_generator
 
 from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.models import Model
